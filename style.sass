@@ -1,0 +1,454 @@
+body
+  font-family: 'Oxanium', cursive
+  background-image: url("img/abstergo.jpg")
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html,
+body
+  height: 100%
+
+.wrapper
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
+.top
+  flex-grow: 1
+
+.center-static
+  padding: 0 calc(50% - 570px)
+
+.center
+  padding: 0 15px
+
+@media (min-width: 576px)
+  .center
+    padding: 0 calc(50% - 270px)
+
+@media (min-width: 768px)
+  .center
+    padding: 0 calc(50% - 360px)
+
+@media (min-width: 992px)
+  .center
+    padding: 0 calc(50% - 480px)
+
+@media (min-width: 1200px)
+  .center
+    padding: 0 calc(50% - 590px)
+
+.clearfix:after
+  content: ""
+  display: table
+  clear: both
+
+.header
+  padding: 20px
+  display: flex
+  justify-content: space-around
+  background-color: #212121
+
+.element
+  height: 200px
+  width: 400px
+  border: 6px solid #a30000
+  border-radius: 30px
+  background-color: #6d6d6d
+  color: coral
+  padding: 15px
+  margin: 15px
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  font-size: 28px
+  transition: .3s
+
+.new-wrap:hover
+  transform: scale(1.03)
+
+.new-wrap
+  position: absolute
+  z-index: 2
+  transition: .3s
+
+.block-active:hover,
+.element:hover
+  transform: scale(1.03)
+  cursor: pointer
+
+.element:active
+  color: white
+  background-color: coral
+
+footer
+  height: 99px
+  background-color: #212121
+
+.main-block
+  padding-bottom: 51px
+  padding-top: 27px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-repeat: no-repeat
+  background-size: cover
+
+a
+  text-decoration: none
+
+.main
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 490px
+  width: 1200px
+  border-radius: 30px
+  background-color: #003d33
+  transition: .5s
+  position: relative
+  background: rgba(255, 245, 215, .5)
+
+
+.desmond-choose
+  background-color: darksalmon
+
+.altair-choose
+  background-color: royalblue
+
+.ezio-choose
+  background-color: darkslateblue
+
+.connor-choose
+  background-color: teal
+
+.edward-choose
+  background-color: yellowgreen
+
+.empty-block,
+.altair-block,
+.ezio-block,
+.connor-block,
+.edward-block,
+.desmond-block
+  display: none
+
+.empty-block-active
+  display: block
+
+.block-active
+  display: flex
+
+
+.empty-block
+  color: black
+  font-size: 40px
+
+.new-logo
+  width: 250px
+  height: 300px
+
+.wrap-edward,
+.wrap-desmond,
+.wrap-connor,
+.wrap-altair,
+.wrap-ezio
+  padding-bottom: 20px
+  padding-top: 20px
+  padding-right: 26px
+  padding-left: 20px
+  background-color: darkkhaki
+  width: 360px
+  min-height: 240px
+  position: absolute
+  top: 200px
+  box-shadow: 0 0 10px black
+
+.hidden-desmond,
+.hidden-altair,
+.hidden-ezio,
+.hidden-connor,
+.hidden-edward
+  display: none
+
+.span-desmond:hover,
+.span-ezio:hover,
+.span-altair:hover,
+.span-connor:hover,
+.span-edward:hover
+  background-color: #ff3d00
+
+.span-desmond:active,
+.span-ezio:active,
+.span-altair:active,
+.span-connor:active,
+.span-edward:active
+  background-color: #ff7539
+  color: white
+
+.span-desmond,
+.span-ezio,
+.span-altair,
+.span-connor,
+.span-edward
+  position: absolute
+  right: 6px
+  top: 6px
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 20px
+  height: 20px
+  background-color: #c30000
+  font-size: 25px
+  cursor: pointer
+  transition: .2s
+
+
+.img-desmond,
+.img-ezio,
+.img-connor,
+.img-altair,
+.img-edward
+  position: relative
+
+.copy_end
+  color: white
+  padding-top: 16px
+  padding-left: 16px
+
+.scale-in-center
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+@-webkit-keyframes scale-in-center
+  0%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+
+@keyframes scale-in-center
+  0%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+
+.scale-out-center
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+  animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+
+@-webkit-keyframes scale-out-center
+  0%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+  100%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+
+@keyframes scale-out-center
+  0%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+  100%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+
+.scale-in-top
+  -webkit-animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+  animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+@-webkit-keyframes scale-in-top
+  0%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    -webkit-transform-origin: 50% 0%
+    transform-origin: 50% 0%
+    opacity: 1
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    -webkit-transform-origin: 50% 0%
+    transform-origin: 50% 0%
+    opacity: 1
+
+@keyframes scale-in-top
+  0%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    -webkit-transform-origin: 50% 0%
+    transform-origin: 50% 0%
+    opacity: 1
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    -webkit-transform-origin: 50% 0%
+    transform-origin: 50% 0%
+    opacity: 1
+
+.scale-in-bottom
+  -webkit-animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+  animation: scale-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+  position: relative
+
+@-webkit-keyframes scale-in-bottom
+  0%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    -webkit-transform-origin: 50% 100%
+    transform-origin: 50% 100%
+    opacity: 1
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    -webkit-transform-origin: 50% 100%
+    transform-origin: 50% 100%
+    opacity: 1
+
+@keyframes scale-in-bottom
+  0%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    -webkit-transform-origin: 50% 100%
+    transform-origin: 50% 100%
+    opacity: 1
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    -webkit-transform-origin: 50% 100%
+    transform-origin: 50% 100%
+    opacity: 1
+
+.scale-in-ver-center
+  -webkit-animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+  animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+@-webkit-keyframes scale-in-ver-center
+  0%
+    -webkit-transform: scaleY(0)
+    transform: scaleY(0)
+    opacity: 1
+  100%
+    -webkit-transform: scaleY(1)
+    transform: scaleY(1)
+    opacity: 1
+
+@keyframes scale-in-ver-center
+  0%
+    -webkit-transform: scaleY(0)
+    transform: scaleY(0)
+    opacity: 1
+  100%
+    -webkit-transform: scaleY(1)
+    transform: scaleY(1)
+    opacity: 1
+
+.scale-out-vertical
+  -webkit-animation: scale-out-vertical 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+  animation: scale-out-vertical 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+
+@-webkit-keyframes scale-out-vertical
+  0%
+    -webkit-transform: scaleY(1)
+    transform: scaleY(1)
+    opacity: 1
+  100%
+    -webkit-transform: scaleY(0)
+    transform: scaleY(0)
+    opacity: 1
+
+@keyframes scale-out-vertical
+  0%
+    -webkit-transform: scaleY(1)
+    transform: scaleY(1)
+    opacity: 1
+  100%
+    -webkit-transform: scaleY(0)
+    transform: scaleY(0)
+    opacity: 1
+
+.thumbnail
+  width: 200px
+  margin-top: 8px
+  border-radius: 20px
+  transition: .3s
+
+.thumbnail:hover
+  transform: scale(1.1)
+
+#lightgallery
+  display: flex
+  flex-direction: column
+  margin-right: 100px
+
+.scale-in-hor-left
+  -webkit-animation: scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+  animation: scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+@-webkit-keyframes scale-in-hor-left
+  0%
+    -webkit-transform: scaleX(0)
+    transform: scaleX(0)
+    -webkit-transform-origin: 0% 0%
+    transform-origin: 0% 0%
+    opacity: 1
+  100%
+    -webkit-transform: scaleX(1)
+    transform: scaleX(1)
+    -webkit-transform-origin: 0% 0%
+    transform-origin: 0% 0%
+    opacity: 1
+
+@keyframes scale-in-hor-left
+  0%
+    -webkit-transform: scaleX(0)
+    transform: scaleX(0)
+    -webkit-transform-origin: 0% 0%
+    transform-origin: 0% 0%
+    opacity: 1
+  100%
+    -webkit-transform: scaleX(1)
+    transform: scaleX(1)
+    -webkit-transform-origin: 0% 0%
+    transform-origin: 0% 0%
+    opacity: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
